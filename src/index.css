@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 330 30% 97%;
+    --foreground: 340 40% 20%;
+
+    --card: 330 40% 96%;
+    --card-foreground: 340 40% 20%;
+
+    --popover: 330 30% 97%;
+    --popover-foreground: 340 40% 20%;
+
+    --primary: 340 82% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 40% 85%;
+    --secondary-foreground: 270 40% 25%;
+
+    --muted: 330 20% 92%;
+    --muted-foreground: 340 15% 50%;
+
+    --accent: 350 90% 72%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 330 30% 88%;
+    --input: 330 30% 88%;
+    --ring: 340 82% 65%;
+
+    --radius: 1rem;
+
+    --valentine-pink: 340 82% 65%;
+    --valentine-rose: 350 90% 72%;
+    --valentine-lavender: 270 40% 80%;
+    --valentine-blush: 330 40% 94%;
+    --valentine-red: 0 75% 55%;
+    --valentine-cream: 40 30% 96%;
+    --valentine-gold: 45 80% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer utilities {
+  .valentine-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--valentine-pink)) 0%,
+      hsl(var(--valentine-lavender)) 50%,
+      hsl(var(--valentine-cream)) 100%
+    );
+  }
+
+  .valentine-text-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--valentine-rose)),
+      hsl(var(--valentine-pink)),
+      hsl(var(--valentine-lavender))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
