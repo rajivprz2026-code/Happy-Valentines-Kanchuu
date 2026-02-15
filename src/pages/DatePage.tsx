@@ -10,7 +10,7 @@ const DatePage = ({ onNext }: DatePageProps) => {
   // Fixed date
   const month = "October";
   const day = 8;
-  const year = 2026; // Change year if needed
+  const year = 2025; // Change year if needed
 
   return (
     <motion.div
